@@ -1,0 +1,69 @@
+
+<h1><u>Employees Table</u></h1>
+
+
+<img src="http://www.wallspick.com/wp-content/uploads/2015/05/blue-sea-wallpaper-640x400.jpg"></img>
+<h2><a href="http://guides.rubyonrails.org/" target="_blank">Rails guide</a></h2>
+
+<style>
+{body background="http://grin-eyed.com/wp-content/uploads/2015/03/SeaOrbiter.jpg"}
+tbody{background-color:cyan}
+table, td, th {
+    border: 1px solid black;
+ }
+  th {
+    background-color: blue;
+    color: white;
+ }
+ .center {
+    margin: auto;
+    width: 60%;
+    border:3px solid #8AC007;
+    padding: 10px;
+}
+ </style>
+
+<table style = "width:100%"> 
+
+  <thead>
+    <tr>
+	  <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Age</th>
+      <th>Salary</th>
+      <th>Department</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+	     <td><%= user.id %></td>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.age %></td>
+        <td><%= user.salary %></td>
+        <td><%= user.department %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<img src="http://www.quicksprout.com/images/foggygoldengatebridge.jpg" alt="Smiley face" style="float:right;">
+<h2><a href="/users?order=age">age</a></h2>
+<h2><a href="/users?order=department">department</a></h2>
+<h2><a href="/users?order=salary">salary</a></h2>
+<h2><a href="/users?order=highest salary">highest salary</a></h2>
+<h2><a href="/users?where=retirement">retirement</a></h2>
+
+<h2><a href="/users?order=salary_department">salary_department</a></h2>
+<h2><a href="/users?order=highest age">highest age</a></h2>
+<h2><a href="/users?order=lowest salary">low_salary high_age</a></h2>
+<h2><a href="/users?order=high&low_salary">high&low_salary</a></h2>
+<br>
+
+<%= link_to 'New User', new_user_path %>
