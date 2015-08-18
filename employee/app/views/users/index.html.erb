@@ -1,12 +1,19 @@
 
 <h1><u>Employees Table</u></h1>
 
+<h2><a href="/users?order=age">age</a></h2>
+<h2><a href="/users?order=department">department</a></h2>
+<h2><a href="/users?order=salary">salary</a></h2>
+<h2><a href="/users?order=highest salary">highest salary</a></h2>
+<h2><a href="/users?where=retirement">retirement</a></h2>
+<h2><a href="/users?order=salary_department">salary_department</a></h2>
+<h2><a href="/users?order=highest age">highest age</a></h2>
+<h2><a href="/users?order=lowest salary">low_salary high_age</a></h2>
+<h2><a href="/users?order=goutam">first and last</a></h2>
 
-<img src="http://www.wallspick.com/wp-content/uploads/2015/05/blue-sea-wallpaper-640x400.jpg"></img>
-<h2><a href="http://guides.rubyonrails.org/" target="_blank">Rails guide</a></h2>
 
 <style>
-{body background="http://grin-eyed.com/wp-content/uploads/2015/03/SeaOrbiter.jpg"}
+
 tbody{background-color:cyan}
 table, td, th {
     border: 1px solid black;
@@ -23,7 +30,7 @@ table, td, th {
 }
  </style>
 
-<table style = "width:100%"> 
+<table> 
 
   <thead>
     <tr>
@@ -53,17 +60,6 @@ table, td, th {
     <% end %>
   </tbody>
 </table>
-<img src="http://www.quicksprout.com/images/foggygoldengatebridge.jpg" alt="Smiley face" style="float:right;">
-<h2><a href="/users?order=age">age</a></h2>
-<h2><a href="/users?order=department">department</a></h2>
-<h2><a href="/users?order=salary">salary</a></h2>
-<h2><a href="/users?order=highest salary">highest salary</a></h2>
-<h2><a href="/users?where=retirement">retirement</a></h2>
 
-<h2><a href="/users?order=salary_department">salary_department</a></h2>
-<h2><a href="/users?order=highest age">highest age</a></h2>
-<h2><a href="/users?order=lowest salary">low_salary high_age</a></h2>
-<h2><a href="/users?order=high&low_salary">high&low_salary</a></h2>
-<br>
 
 <%= link_to 'New User', new_user_path %>

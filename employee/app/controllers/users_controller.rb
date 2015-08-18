@@ -28,8 +28,10 @@ class UsersController < ApplicationController
 	 elsif params.has_key?(:order) and params[:order]=='lowest salary'
       @users =User.order("age desc").first(1) 
      	  
-     elsif params.has_key?(:order) and params[:order]=='high&low_salary'
-      @users =User.order("salary desc").first(1)||last(1)
+     elsif params.has_key?(:order) and params[:order]=='goutam'
+       @users = []
+       @users.push User.order("salary desc").first
+       @users.push User.order("salary desc").last	   
      	  
 	else
     @users = User.all
